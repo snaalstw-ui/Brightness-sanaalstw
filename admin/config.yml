@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: your-github-username/your-repo-name # (استبدل هذا باسم مستخدم GitHub ورابط المستودع الخاص بك)
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "catalog"
+    label: "كتالوج المنتجات"
+    files:
+      - file: "index.html"
+        label: "المنتجات والأسعار"
+        name: "products_data"
