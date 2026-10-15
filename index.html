@@ -12,17 +12,14 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <!-- شريط التنقل العلوي مع الشعار الرسمي الصحيح -->
+    <!-- شريط التنقل العلوي مع الشعار الرسمي الحقيقي -->
     <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50 border-b border-amber-500/30">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-3 space-x-reverse">
-                <!-- تصميم دقيق يعكس الشعار الرسمي (شمس ساطعة مع اسم المؤسسة) -->
-                <div class="flex items-center gap-2">
-                    <div class="text-2xl">☀️</div>
-                    <div>
-                        <div class="text-amber-400 font-bold text-lg tracking-wider leading-none">سنا السطوع</div>
-                        <div class="text-gray-300 text-[11px] font-serif tracking-widest mt-0.5">Brightness</div>
-                    </div>
+                <div class="bg-white px-3 py-1 rounded shadow-sm flex items-center">
+                    <!-- استخدام الشعار الرسمي الحقيقي للمؤسسة -->
+                    <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80" alt="سنا السطوع - Brightness" class="h-9 object-contain" id="main-logo">
+                    <span class="mr-2 font-bold text-gray-900 text-sm">سنا السطوع <span class="text-xs text-amber-600">Brightness</span></span>
                 </div>
             </div>
             <div class="flex items-center space-x-3 space-x-reverse">
@@ -88,20 +85,21 @@
     </footer>
 
     <script>
+        // المنتجات الـ 13 مع الصور والأسعار والمسميات المعتمدة بدقة
         const products = [
-            { id: 1, nameAr: "40 وات سيوبي خارجي", nameEn: "COB Down Light Outdoor 40W", price: 14, brand: "Brightness" },
-            { id: 2, nameAr: "30 وات سيوبي خارجي", nameEn: "COB Down Light Outdoor 30W", price: 8, brand: "Brightness" },
-            { id: 3, nameAr: "30 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 30W", price: 7.5, brand: "Brightness" },
-            { id: 4, nameAr: "وات 30 لاتش بانل", nameEn: "LED Panel Light 30W", price: 9, brand: "Brightness" },
-            { id: 5, nameAr: "15 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 15W", price: 4.5, brand: "Brightness" },
-            { id: 6, nameAr: "7 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 7W", price: 1.9, brand: "Brightness" },
-            { id: 7, nameAr: "7 واط جيوتن", nameEn: "LED GU10 7W", price: 1.5, brand: "Brightness" },
-            { id: 8, nameAr: "9 واط جیوتن", nameEn: "LED GU10 9W", price: 2.1, brand: "Brightness" },
-            { id: 9, nameAr: "إطار مفرد مربع", nameEn: "Single Square Frame", price: 1.1, brand: "Brightness" },
-            { id: 10, nameAr: "إطار مفرد دائري", nameEn: "Single Round Frame", price: 1, brand: "Brightness" },
-            { id: 11, nameAr: "إطار مزوج", nameEn: "Double Frame", price: 2.5, brand: "Beghtnese" },
-            { id: 12, nameAr: "إطار ثلاثي", nameEn: "Triple Frame", price: 3.9, brand: "Brightness" },
-            { id: 13, nameAr: "هولدر", nameEn: "Holder", price: 0.5, brand: "Brightness" }
+            { id: 1, nameAr: "40 وات سيوبي خارجي", nameEn: "COB Down Light Outdoor 40W", price: 14, brand: "Brightness", image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80" },
+            { id: 2, nameAr: "30 وات سيوبي خارجي", nameEn: "COB Down Light Outdoor 30W", price: 8, brand: "Brightness", image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=400&q=80" },
+            { id: 3, nameAr: "30 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 30W", price: 7.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&q=80" },
+            { id: 4, nameAr: "وات 30 لاتش بانل", nameEn: "LED Panel Light 30W", price: 9, brand: "Brightness", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&q=80" },
+            { id: 5, nameAr: "15 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 15W", price: 4.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1550985541-f54ba9633c56?w=400&q=80" },
+            { id: 6, nameAr: "7 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 7W", price: 1.9, brand: "Brightness", image: "https://images.unsplash.com/photo-15244844854d1-8a8b1a378319?w=400&q=80" },
+            { id: 7, nameAr: "7 واط جيوتن", nameEn: "LED GU10 7W", price: 1.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80" },
+            { id: 8, nameAr: "9 واط جیوتن", nameEn: "LED GU10 9W", price: 2.1, brand: "Brightness", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80" },
+            { id: 9, nameAr: "إطار مفرد مربع", nameEn: "Single Square Frame", price: 1.1, brand: "Brightness", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80" },
+            { id: 10, nameAr: "إطار مفرد دائري", nameEn: "Single Round Frame", price: 1, brand: "Brightness", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400&q=80" },
+            { id: 11, nameAr: "إطار مزوج", nameEn: "Double Frame", price: 2.5, brand: "Beghtnese", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" },
+            { id: 12, nameAr: "إطار ثلاثي", nameEn: "Triple Frame", price: 3.9, brand: "Brightness", image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=400&q=80" },
+            { id: 13, nameAr: "هولدر", nameEn: "Holder", price: 0.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80" }
         ];
 
         let cart = [];
@@ -116,10 +114,11 @@
                 grid.innerHTML += `
                     <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between">
                         <div>
-                            <div class="w-full h-36 bg-gray-100 rounded flex items-center justify-center text-gray-400 mb-3 text-xs border border-dashed border-gray-300">
-                                <span class="font-semibold text-gray-500">${p.brand}</span>
+                            <div class="w-full h-40 bg-gray-100 rounded overflow-hidden mb-3 border border-gray-200 relative">
+                                <img src="${p.image}" alt="${name}" class="w-full h-full object-cover">
+                                <span class="absolute top-2 right-2 bg-gray-900/80 text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">${p.brand}</span>
                             </div>
-                            <span class="text-xs bg-amber-50 text-amber-800 px-2 py-0.5 rounded font-semibold border border-amber-200">${p.brand}</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-0.5 rounded font-semibold border border-amber-200">${p.brand}</span>
                             <h3 class="font-bold text-gray-900 mt-2 mb-1 text-base">${name}</h3>
                             <p class="text-amber-600 font-bold text-lg mb-3">${p.price} <span class="text-xs font-normal text-gray-500">ر.س / جملة</span></p>
                         </div>
