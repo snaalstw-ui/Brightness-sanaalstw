@@ -1,165 +1,27 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brightness | سنا السطوع - المنتجات</title>
-<style>
-  :root{
-    --gold:#d9902b;
-    --dark:#14213d;
-    --bg:#faf7f2;
-    --card:#ffffff;
-    --muted:#6b7280;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
-  a{text-decoration:none;color:inherit}
+logo.png (الشعار)
 
-  header{background:#fff;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:10}
-  .header-inner{max-width:1200px;margin:auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .logo img{height:64px;width:auto;display:block}
-  nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
-  nav a{font-weight:600;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s}
-  nav a:hover{color:var(--gold);border-color:var(--gold)}
+cob-7w-indoor.jpg (7 وات سيوبي داخلي)
 
-  .hero{background:linear-gradient(135deg,var(--dark),#2b3a67);color:#fff;text-align:center;padding:50px 20px}
-  .hero h1{font-size:2rem;margin-bottom:8px}
-  .hero p{color:#e5e7eb}
+cob-15w-indoor.jpg (15 وات سيوبي داخلي)
 
-  main{max-width:1200px;margin:auto;padding:30px 20px 60px}
-  section{margin-bottom:50px;scroll-margin-top:100px}
-  section h2{font-size:1.5rem;margin-bottom:20px;padding-right:14px;border-right:5px solid var(--gold)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
-  .card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:.25s;display:flex;flex-direction:column}
-  .card:hover{transform:translateY(-5px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
-  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee}
-  .card-body{padding:14px}
-  .card-body h3{font-size:1.05rem;margin-bottom:4px}
-  .card-body p{color:var(--muted);font-size:.9rem}
-  .badge{display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:.78rem;padding:2px 10px;border-radius:20px}
+cob-30w-indoor.jpg (30 وات سيوبي داخلي)
 
-  footer{background:var(--dark);color:#fff;text-align:center;padding:30px 20px}
-  footer img{height:60px;background:#fff;padding:6px 12px;border-radius:10px;margin-bottom:10px}
-  footer small{display:block;color:#cbd5e1}
-</style>
-</head>
-<body>
+cob-30w-outdoor.jpg (30 وات سيوبي خارجي)
 
-<header>
-  <div class="header-inner">
-    <a href="#" class="logo">
-      <img src="images/logo.png" alt="Brightness - سنا السطوع">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#cob-downlight">كوب داون لايت</a></li>
-        <li><a href="#panel">بانيل</a></li>
-        <li><a href="#gu10">لمبات GU10</a></li>
-        <li><a href="#frames">إطارات السبوت لايت</a></li>
-        <li><a href="#accessories">ملحقات</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+cob-40w-outdoor.jpg (40 وات سيوبي خارجي)
 
-<div class="hero">
-  <h1>مؤسسة سنا السطوع للتجارة</h1>
-  <p>حلول إضاءة LED بجودة عالية وضمان يصل إلى 3 سنوات</p>
-</div>
+panel-30w.jpg (وات 30 لاتش بانل)
 
-<main>
+gu10-7w.jpg (7 واط جيوتن)
 
-  <section id="cob-downlight">
-    <h2>كوب داون لايت - COB Down Light</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="images/cob-downlight-7w.jpg" alt="COB Down Light 7W" loading="lazy">
-        <div class="card-body"><h3>COB Down Light 7W</h3><p>سبوت غاطس</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-      <article class="card">
-        <img src="images/cob-downlight-15w.jpg" alt="COB Down Light 15W" loading="lazy">
-        <div class="card-body"><h3>COB Down Light 15W</h3><p>داون لايت غاطس</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-      <article class="card">
-        <img src="images/cob-downlight-30w-recessed.jpg" alt="COB Down Light 30W غاطس" loading="lazy">
-        <div class="card-body"><h3>COB Down Light 30W</h3><p>تركيب غاطس</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-      <article class="card">
-        <img src="images/cob-downlight-30w-surface.jpg" alt="COB Down Light 30W خارجي" loading="lazy">
-        <div class="card-body"><h3>COB Down Light 30W</h3><p>تركيب خارجي (سطحي)</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-      <article class="card">
-        <img src="images/cob-downlight-40w.jpg" alt="COB Down Light 40W" loading="lazy">
-        <div class="card-body"><h3>COB Down Light 40W</h3><p>تركيب خارجي (سطحي)</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-    </div>
-  </section>
+gu10-9w.jpg (9 واط جيوتن)
 
-  <section id="panel">
-    <h2>بانيل - LED Panel</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="images/panel-30w-surface.jpg" alt="بانيل دائري 30W خارجي" loading="lazy">
-        <div class="card-body"><h3>بانيل دائري 30W</h3><p>تركيب خارجي (سطحي)</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-    </div>
-  </section>
+frame-round.jpg (إطار مفرد دائري)
 
-  <section id="gu10">
-    <h2>لمبات LED GU10</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="images/led-gu10-7w.jpg" alt="LED GU10 7W" loading="lazy">
-        <div class="card-body"><h3>LED GU10 7W</h3><p>لمبة سبوت</p><span class="badge">ضمان 3 سنوات</span></div>
-      </article>
-      <article class="card">
-        <img src="images/led-gu10-9w.jpg" alt="LED GU10 9W" loading="lazy">
-        <div class="card-body"><h3>LED GU10 9W</h3><p>لمبة سبوت</p><span class="badge">ضمان سنتين</span></div>
-      </article>
-    </div>
-  </section>
+frame-square.jpg (إطار مفرد مربع)
 
-  <section id="frames">
-    <h2>إطارات السبوت لايت - Spot Light Frame</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="images/frame-round.jpg" alt="إطار سبوت لايت دائري أبيض" loading="lazy">
-        <div class="card-body"><h3>إطار سبوت لايت دائري</h3><p>أبيض بداخل أسود - فتحة واحدة</p></div>
-      </article>
-      <article class="card">
-        <img src="images/frame-square-black.jpg" alt="إطار سبوت لايت مربع أسود" loading="lazy">
-        <div class="card-body"><h3>إطار سبوت لايت مربع</h3><p>أسود - فتحة واحدة</p></div>
-      </article>
-      <article class="card">
-        <img src="images/frame-double-white.jpg" alt="إطار سبوت لايت مزدوج أبيض" loading="lazy">
-        <div class="card-body"><h3>إطار سبوت لايت مزدوج</h3><p>أبيض - فتحتان</p></div>
-      </article>
-      <article class="card">
-        <img src="images/frame-triple-black.jpg" alt="إطار سبوت لايت ثلاثي أسود" loading="lazy">
-        <div class="card-body"><h3>إطار سبوت لايت ثلاثي</h3><p>أسود - ثلاث فتحات</p></div>
-      </article>
-    </div>
-  </section>
+frame-double.jpg (إطار مزوج)
 
-  <section id="accessories">
-    <h2>ملحقات</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="images/gu10-socket.jpg" alt="قاعدة GU10 سيراميك" loading="lazy">
-        <div class="card-body"><h3>قاعدة GU10</h3><p>سيراميك مع أسلاك</p></div>
-      </article>
-    </div>
-  </section>
+frame-triple.jpg (إطار ثلاثي)
 
-</main>
-
-<footer>
-  <img src="images/logo.png" alt="Brightness - سنا السطوع">
-  <p>مؤسسة سنا السطوع للتجارة</p>
-  <small>سجل تجاري: 1009029128</small>
-  <small>© 2026 Brightness. جميع الحقوق محفوظة.</small>
-</footer>
-
-</body>
-</html>
+holder.jpg (هولدر)
