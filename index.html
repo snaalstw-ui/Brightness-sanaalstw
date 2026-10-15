@@ -1,218 +1,458 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة سنا السطوع للكهرباء والأدوات الصحية | كتالوج الجملة</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Cairo', sans-serif; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brightness | سنا السطوع - كتالوج الجملة</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  :root{
+    --gold:#d9902b;
+    --dark:#14213d;
+    --bg:#faf7f2;
+    --card:#ffffff;
+    --muted:#6b7280;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+  a{text-decoration:none;color:inherit}
+
+  header{background:#fff;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:50}
+  .header-inner{max-width:1200px;margin:auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo img{height:54px;width:auto;display:block}
+  nav ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  nav a{font-weight:600;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s;font-size:0.95rem}
+  nav a:hover{color:var(--gold);border-color:var(--gold)}
+
+  .hero{background:linear-gradient(135deg,var(--dark),#2b3a67);color:#fff;text-align:center;padding:40px 20px}
+  .hero h1{font-size:1.8rem;margin-bottom:8px}
+  .hero p{color:#e5e7eb;font-size:0.95rem}
+
+  main{max-width:1200px;margin:auto;padding:30px 20px 60px}
+  section{margin-bottom:45px;scroll-margin-top:100px}
+  section h2{font-size:1.4rem;margin-bottom:20px;padding-right:14px;border-right:5px solid var(--gold)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+  .card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:.25s;display:flex;flex-direction:column;justify-content:between}
+  .card:hover{transform:translateY(-5px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee}
+  .card-body{padding:14px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between}
+  .card-body h3{font-size:1.05rem;margin-bottom:4px;font-weight:700}
+  .card-body p{color:var(--muted);font-size:.85rem;margin-bottom:8px}
+  .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;margin-bottom:10px}
+  .price{color:#d9902b;font-weight:bold;font-size:1.1rem}
+  .price span{font-size:0.75rem;color:var(--muted);font-weight:normal}
+  .badge{display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;padding:2px 8px;border-radius:20px;font-weight:600}
+  
+  .action-box{display:flex;gap:8px;margin-top:auto}
+  .action-box input{width:55px;border:1px solid #d1d5db;border-radius:6px;text-align:center;padding:6px;font-size:0.9rem}
+  .action-box button{flex-grow:1;background:var(--dark);color:#fff;border:none;border-radius:6px;padding:6px 10px;font-weight:bold;font-size:0.85rem;cursor:pointer;transition:.2s}
+  .action-box button:hover{background:var(--gold)}
+
+  .cart-btn{background:var(--gold);color:#111;padding:6px 14px;border-radius:8px;font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;font-size:0.9rem}
+
+  footer{background:var(--dark);color:#fff;text-align:center;padding:30px 20px}
+  footer img{height:50px;background:#fff;padding:6px 10px;border-radius:8px;margin-bottom:10px}
+  footer small{display:block;color:#cbd5e1;margin-top:4px}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-    <!-- شريط التنقل العلوي مع الشعار الرسمي الحقيقي -->
-    <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50 border-b border-amber-500/30">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="bg-white px-3 py-1 rounded shadow-sm flex items-center">
-                    <!-- استخدام الشعار الرسمي الحقيقي للمؤسسة -->
-                    <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80" alt="سنا السطوع - Brightness" class="h-9 object-contain" id="main-logo">
-                    <span class="mr-2 font-bold text-gray-900 text-sm">سنا السطوع <span class="text-xs text-amber-600">Brightness</span></span>
-                </div>
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="Brightness - سنا السطوع">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#cob-downlight">كوب داون لايت</a></li>
+        <li><a href="#panel">بانيل</a></li>
+        <li><a href="#gu10">لمبات GU10</a></li>
+        <li><a href="#frames">إطارات السبوت لايت</a></li>
+        <li><a href="#accessories">ملحقات</a></li>
+        <li>
+          <button onclick="openCartModal()" class="cart-btn">
+            🛒 طلبات الجملة (<span id="cart-count">0</span>)
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>مؤسسة سنا السطوع للتجارة</h1>
+  <p>الرياض - سوق الفيصلية | تجارة الجملة واستيراد المواد الكهربائية والأدوات الصحية</p>
+</div>
+
+<main>
+
+  <!-- كوب داون لايت -->
+  <section id="cob-downlight">
+    <h2>كوب داون لايت - COB Down Light</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/7 وات سيوبي داخلي.jpg" alt="COB Down Light Indoor 7W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>7 وات سيوبي داخلي</h3>
+            <p>COB Down Light Indoor 7W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">1.9 <span>ر.س / جملة</span></span>
             </div>
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <button onclick="toggleLanguage()" class="bg-gray-800 hover:bg-gray-700 text-amber-400 border border-amber-500/40 font-bold px-3 py-1.5 rounded text-sm transition">
-                    English / عربي
-                </button>
-                <button onclick="openCartModal()" class="bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold px-3 py-1.5 rounded text-sm flex items-center gap-1.5 transition shadow-sm">
-                    🛒 طلبات الجملة (<span id="cart-count">0</span>)
-                </button>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-6" value="1" min="1">
+            <button onclick="addToCart(6, '7 وات سيوبي داخلي', 1.9)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/15 وات سيوبي داخلي.jpg" alt="COB Down Light Indoor 15W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>15 وات سيوبي داخلي</h3>
+            <p>COB Down Light Indoor 15W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">4.5 <span>ر.س / جملة</span></span>
             </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-5" value="1" min="1">
+            <button onclick="addToCart(5, '15 وات سيوبي داخلي', 4.5)">إضافة للطلب</button>
+          </div>
         </div>
-    </header>
+      </article>
 
-    <!-- الهيدر الترحيبي -->
-    <section class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-10 border-b border-amber-500/20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-2xl md:text-3xl font-bold mb-2 text-amber-400">مؤسسة سنا السطوع للكهرباء والأدوات الصحية</h1>
-            <p class="text-gray-300 max-w-2xl mx-auto text-sm">
-                الرياض - سوق الفيصلية | تجارة الجملة واستيراد المواد الكهربائية والأدوات الصحية.
-            </p>
+      <article class="card">
+        <img src="images/30 وات سيوبي داخلي.jpg" alt="COB Down Light Indoor 30W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>30 وات سيوبي داخلي</h3>
+            <p>COB Down Light Indoor 30W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">7.5 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-3" value="1" min="1">
+            <button onclick="addToCart(3, '30 وات سيوبي داخلي', 7.5)">إضافة للطلب</button>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- محتوى الكتالوج -->
-    <main class="container mx-auto px-4 py-8">
-        <div class="flex justify-between items-center mb-6 border-b pb-4">
-            <h2 class="text-xl font-bold text-gray-800 border-r-4 border-amber-500 pr-3">قائمة المنتجات المعتمدة</h2>
-            <span class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold">أسعار الجملة المعتمدة</span>
+      <article class="card">
+        <img src="images/30 وات سيوبي خارجي.jpg" alt="COB Down Light Outdoor 30W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>30 وات سيوبي خارجي</h3>
+            <p>COB Down Light Outdoor 30W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">8 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-2" value="1" min="1">
+            <button onclick="addToCart(2, '30 وات سيوبي خارجي', 8)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/40 وات سيوبي خارجي.jpg" alt="COB Down Light Outdoor 40W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>40 وات سيوبي خارجي</h3>
+            <p>COB Down Light Outdoor 40W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">14 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-1" value="1" min="1">
+            <button onclick="addToCart(1, '40 وات سيوبي خارجي', 14)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- بانيل -->
+  <section id="panel">
+    <h2>بانيل - LED Panel</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/وات 30 لاتش بانل.jpg" alt="LED Panel Light 30W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>وات 30 لاتش بانل</h3>
+            <p>LED Panel Light 30W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">9 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-4" value="1" min="1">
+            <button onclick="addToCart(4, 'وات 30 لاتش بانل', 9)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- لمبات GU10 -->
+  <section id="gu10">
+    <h2>لمبات LED GU10</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/جيوتن 7 واط.jpg" alt="LED GU10 7W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>7 واط جيوتن</h3>
+            <p>LED GU10 7W</p>
+            <span class="badge">ضمان 3 سنوات</span>
+            <div class="price-row">
+              <span class="price">1.5 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-7" value="1" min="1">
+            <button onclick="addToCart(7, '7 واط جيوتن', 1.5)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/جيوتن 9 واط .jpg" alt="LED GU10 9W" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>9 واط جيوتن</h3>
+            <p>LED GU10 9W</p>
+            <span class="badge">ضمان سنتين</span>
+            <div class="price-row">
+              <span class="price">2.1 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-8" value="1" min="1">
+            <button onclick="addToCart(8, '9 واط جيوتن', 2.1)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- إطارات السبوت لايت -->
+  <section id="frames">
+    <h2>إطارات السبوت لايت - Spot Light Frame</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/اطار مفرد دائري.jpg" alt="Single Round Frame" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>إطار مفرد دائري</h3>
+            <p>Single Round Frame</p>
+            <span class="badge">جودة عالية</span>
+            <div class="price-row">
+              <span class="price">1 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-10" value="1" min="1">
+            <button onclick="addToCart(10, 'إطار مفرد دائري', 1)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/اطار مفرد مربع.jpg" alt="Single Square Frame" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>إطار مفرد مربع</h3>
+            <p>Single Square Frame</p>
+            <span class="badge">جودة عالية</span>
+            <div class="price-row">
+              <span class="price">1.1 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-9" value="1" min="1">
+            <button onclick="addToCart(9, 'إطار مفرد مربع', 1.1)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/اطار مزوج.jpg" alt="Double Frame" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>إطار مزوج</h3>
+            <p>Double Frame</p>
+            <span class="badge">جودة عالية</span>
+            <div class="price-row">
+              <span class="price">2.5 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-11" value="1" min="1">
+            <button onclick="addToCart(11, 'إطار مزوج', 2.5)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/اطار ثلاثي.jpg" alt="Triple Frame" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>إطار ثلاثي</h3>
+            <p>Triple Frame</p>
+            <span class="badge">جودة عالية</span>
+            <div class="price-row">
+              <span class="price">3.9 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-12" value="1" min="1">
+            <button onclick="addToCart(12, 'إطار ثلاثي', 3.9)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ملحقات -->
+  <section id="accessories">
+    <h2>ملحقات</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/holder.jpg" alt="Holder" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>هولدر</h3>
+            <p>Holder / Socket</p>
+            <span class="badge">سيراميك</span>
+            <div class="price-row">
+              <span class="price">0.5 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-13" value="1" min="1">
+            <button onclick="addToCart(13, 'هولدر', 0.5)">إضافة للطلب</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<!-- نافذة سلة طلبات عروض الأسعار -->
+<div id="cart-modal" style="display:none;" class="fixed inset-0 bg-black/60 items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg max-w-lg w-full p-6 shadow-xl max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-4 border-b pb-3">
+            <h3 class="text-lg font-bold text-gray-900">قائمة طلب عرض سعر بالجملة</h3>
+            <button onclick="closeCartModal()" class="text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
         </div>
         
-        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- المنتجات -->
+        <div id="cart-items" class="space-y-3 mb-4">
+            <!-- المنتجات المضافة -->
         </div>
-    </main>
 
-    <!-- نافذة سلة طلبات عروض الأسعار -->
-    <div id="cart-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4">
-        <div class="bg-white rounded-lg max-w-lg w-full p-6 shadow-xl max-h-[90vh] overflow-y-auto">
-            <div class="flex justify-between items-center mb-4 border-b pb-3">
-                <h3 class="text-lg font-bold text-gray-900">قائمة طلب عرض سعر بالجملة</h3>
-                <button onclick="closeCartModal()" class="text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
-            </div>
-            
-            <div id="cart-items" class="space-y-3 mb-4">
-                <!-- المنتجات المضافة -->
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-sm font-semibold mb-1 text-gray-700">ملاحظات أو استفسار إضافي:</label>
-                <textarea id="customer-notes" class="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none" rows="3" placeholder="اكتب اسم شركتك، المدينة، أو الكميات المطلوبة..."></textarea>
-            </div>
-
-            <button onclick="sendToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded transition flex items-center justify-center gap-2 shadow-sm">
-                📲 إرسال طلب عرض السعر عبر واتساب
-            </button>
+        <div class="mb-4">
+            <label class="block text-sm font-semibold mb-1 text-gray-700">ملاحظات أو استفسار إضافي:</label>
+            <textarea id="customer-notes" class="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none" rows="3" placeholder="اكتب اسم شركتك، المدينة، أو الكميات المطلوبة..."></textarea>
         </div>
+
+        <button onclick="sendToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded transition flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+            📲 إرسال طلب عرض السعر عبر واتساب
+        </button>
     </div>
+</div>
 
-    <!-- تذييل الصفحة -->
-    <footer class="bg-gray-900 text-gray-400 py-6 border-t border-gray-800 text-center text-sm">
-        <p>مؤسسة سنا السطوع للكهرباء والأدوات الصحية - الرياض، سوق الفيصلية.</p>
-        <p class="mt-1">واتساب المؤسسة: <a href="https://wa.me/966550144275" class="text-amber-400 hover:underline">+966550144275</a></p>
-    </footer>
+<footer>
+  <img src="images/logo.png" alt="Brightness - سنا السطوع">
+  <p>مؤسسة سنا السطوع للتجارة</p>
+  <small>سجل تجاري: 1009029128</small>
+  <small>© 2026 Brightness. جميع الحقوق محفوظة.</small>
+</footer>
 
-    <script>
-        // المنتجات الـ 13 مع الصور والأسعار والمسميات المعتمدة بدقة
-        const products = [
-            { id: 1, nameAr: "40 وات سيوبي خارجي", nameEn: "COB Down Light Outdoor 40W", price: 14, brand: "Brightness", image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80" },
-            { id: 2, nameAr: "30 وات سيوبي خارجي", nameEn: "COB Down Light Outdoor 30W", price: 8, brand: "Brightness", image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=400&q=80" },
-            { id: 3, nameAr: "30 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 30W", price: 7.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&q=80" },
-            { id: 4, nameAr: "وات 30 لاتش بانل", nameEn: "LED Panel Light 30W", price: 9, brand: "Brightness", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&q=80" },
-            { id: 5, nameAr: "15 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 15W", price: 4.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1550985541-f54ba9633c56?w=400&q=80" },
-            { id: 6, nameAr: "7 وات سيوبي داخلي", nameEn: "COB Down Light Indoor 7W", price: 1.9, brand: "Brightness", image: "https://images.unsplash.com/photo-15244844854d1-8a8b1a378319?w=400&q=80" },
-            { id: 7, nameAr: "7 واط جيوتن", nameEn: "LED GU10 7W", price: 1.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80" },
-            { id: 8, nameAr: "9 واط جیوتن", nameEn: "LED GU10 9W", price: 2.1, brand: "Brightness", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80" },
-            { id: 9, nameAr: "إطار مفرد مربع", nameEn: "Single Square Frame", price: 1.1, brand: "Brightness", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80" },
-            { id: 10, nameAr: "إطار مفرد دائري", nameEn: "Single Round Frame", price: 1, brand: "Brightness", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400&q=80" },
-            { id: 11, nameAr: "إطار مزوج", nameEn: "Double Frame", price: 2.5, brand: "Beghtnese", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" },
-            { id: 12, nameAr: "إطار ثلاثي", nameEn: "Triple Frame", price: 3.9, brand: "Brightness", image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=400&q=80" },
-            { id: 13, nameAr: "هولدر", nameEn: "Holder", price: 0.5, brand: "Brightness", image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80" }
-        ];
+<script>
+    let cart = [];
 
-        let cart = [];
-        let currentLang = 'ar';
+    function addToCart(id, name, price) {
+        const qtyInput = document.getElementById(`qty-${id}`);
+        const qty = parseInt(qtyInput.value) || 1;
+        const existing = cart.find(item => item.id === id);
+        
+        if (existing) {
+            existing.qty += qty;
+        } else {
+            cart.push({ id, name, price, qty });
+        }
+        updateCartCount();
+        alert('تمت إضافة المنتج إلى قائمة طلب عرض السعر');
+    }
 
-        function renderProducts() {
-            const grid = document.getElementById('products-grid');
-            grid.innerHTML = '';
-            
-            products.forEach(p => {
-                const name = currentLang === 'ar' ? p.nameAr : p.nameEn;
-                grid.innerHTML += `
-                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+    function updateCartCount() {
+        const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+        document.getElementById('cart-count').innerText = totalQty;
+    }
+
+    function openCartModal() {
+        const container = document.getElementById('cart-items');
+        container.innerHTML = '';
+        if (cart.length === 0) {
+            container.innerHTML = `<p class="text-gray-500 text-center py-4">قائمة الطلب فارغة حالياً.</p>`;
+        } else {
+            cart.forEach((item, index) => {
+                container.innerHTML += `
+                    <div class="flex justify-between items-center border-b pb-2 text-sm">
                         <div>
-                            <div class="w-full h-40 bg-gray-100 rounded overflow-hidden mb-3 border border-gray-200 relative">
-                                <img src="${p.image}" alt="${name}" class="w-full h-full object-cover">
-                                <span class="absolute top-2 right-2 bg-gray-900/80 text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">${p.brand}</span>
-                            </div>
-                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-0.5 rounded font-semibold border border-amber-200">${p.brand}</span>
-                            <h3 class="font-bold text-gray-900 mt-2 mb-1 text-base">${name}</h3>
-                            <p class="text-amber-600 font-bold text-lg mb-3">${p.price} <span class="text-xs font-normal text-gray-500">ر.س / جملة</span></p>
+                            <p class="font-bold text-gray-800">${item.name}</p>
+                            <p class="text-gray-500 text-xs">${item.price} ر.س × الكمية: ${item.qty}</p>
                         </div>
-                        <div class="flex items-center gap-2 mt-2">
-                            <input type="number" id="qty-${p.id}" value="1" min="1" class="w-16 border border-gray-300 rounded text-center py-1 text-sm focus:ring-2 focus:ring-amber-500 outline-none">
-                            <button onclick="addToCart(${p.id})" class="flex-1 bg-gray-900 hover:bg-amber-600 text-white text-xs font-bold py-2 px-3 rounded transition shadow-sm">
-                                ${currentLang === 'ar' ? 'إضافة للطلب' : 'Add to Quote'}
-                            </button>
-                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700 text-xs font-semibold cursor-pointer">حذف</button>
                     </div>
                 `;
             });
         }
+        document.getElementById('cart-modal').style.display = 'flex';
+    }
 
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            const qty = parseInt(document.getElementById(`qty-${productId}`).value) || 1;
-            const existing = cart.find(item => item.id === productId);
-            if (existing) {
-                existing.qty += qty;
-            } else {
-                cart.push({ ...product, qty });
-            }
-            updateCartCount();
-            alert(currentLang === 'ar' ? 'تمت إضافة المنتج إلى قائمة الطلب' : 'Product added to quote list');
+    function closeCartModal() {
+        document.getElementById('cart-modal').style.display = 'none';
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartCount();
+        openCartModal();
+    }
+
+    function sendToWhatsApp() {
+        if (cart.length === 0) {
+            alert('الرجاء إضافة منتجات أولاً');
+            return;
         }
-
-        function updateCartCount() {
-            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-            document.getElementById('cart-count').innerText = totalQty;
+        const notes = document.getElementById('customer-notes').value;
+        let message = `السلام عليكم، أود طلب عرض سعر من مؤسسة سنا السطوع:\n\n`;
+        cart.forEach((item, i) => {
+            message += `${i + 1}. ${item.name} - الكمية: ${item.qty} (السعر: ${item.price} ر.س)\n`;
+        });
+        if (notes) {
+            message += `\nملاحظات العميل: ${notes}`;
         }
+        
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/966550144275?text=${encodedMessage}`, '_blank');
+    }
+</script>
 
-        function openCartModal() {
-            const container = document.getElementById('cart-items');
-            container.innerHTML = '';
-            if (cart.length === 0) {
-                container.innerHTML = `<p class="text-gray-500 text-center py-4">${currentLang === 'ar' ? 'قائمة الطلب فارغة حالياً.' : 'Quote list is empty.'}</p>`;
-            } else {
-                cart.forEach((item, index) => {
-                    const name = currentLang === 'ar' ? item.nameAr : item.nameEn;
-                    container.innerHTML += `
-                        <div class="flex justify-between items-center border-b pb-2 text-sm">
-                            <div>
-                                <p class="font-bold text-gray-800">${name}</p>
-                                <p class="text-gray-500 text-xs">${item.price} ر.س × الكمية: ${item.qty}</p>
-                            </div>
-                            <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700 text-xs font-semibold">حذف</button>
-                        </div>
-                    `;
-                });
-            }
-            document.getElementById('cart-modal').classList.remove('hidden');
-            document.getElementById('cart-modal').classList.add('flex');
-        }
-
-        function closeCartModal() {
-            document.getElementById('cart-modal').classList.remove('flex');
-            document.getElementById('cart-modal').classList.add('hidden');
-        }
-
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartCount();
-            openCartModal();
-        }
-
-        function sendToWhatsApp() {
-            if (cart.length === 0) {
-                alert(currentLang === 'ar' ? 'الرجاء إضافة منتجات أولاً' : 'Please add products first');
-                return;
-            }
-            const notes = document.getElementById('customer-notes').value;
-            let message = `السلام عليكم، أود طلب عرض سعر من مؤسسة سنا السطوع:\n\n`;
-            cart.forEach((item, i) => {
-                const name = currentLang === 'ar' ? item.nameAr : item.nameEn;
-                message += `${i + 1}. ${name} - الكمية: ${item.qty}\n`;
-            });
-            if (notes) {
-                message += `\nملاحظات العميل: ${notes}`;
-            }
-            
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/966550144275?text=${encodedMessage}`, '_blank');
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const html = document.documentElement;
-            html.setAttribute('lang', currentLang);
-            html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-            renderProducts();
-        }
-
-        renderProducts();
-    </script>
 </body>
 </html>
