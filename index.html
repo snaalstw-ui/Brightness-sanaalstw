@@ -7,62 +7,62 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <style>
   :root {
-    --brand-gold: #c68a27;      /* الذهبي الرسمي للشعار */
-    --brand-gold-hover: #a8721d;/* ذهبي غامق للتفاعل */
-    --brand-dark: #111827;      /* الأسود الداكن */
-    --brand-dark-light: #1f2937;
-    --bg-light: #f9fafb;
+    --brand-gold-light: #e6b800;   /* ذهبي فاتح */
+    --brand-orange: #f97316;       /* برتقالي دافئ */
+    --brand-orange-hover: #ea580c; /* برتقالي غامق للتفاعل */
+    --brand-dark: #1f2937;         /* أسود متوازن */
+    --bg-light: #fefce8;           /* خلفية لمسة ذهبية فاتحة جداً */
     --card-bg: #ffffff;
-    --muted-text: #6b7280;
+    --muted-text: #4b5563;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg-light);color:var(--brand-dark);line-height:1.6}
   a{text-decoration:none;color:inherit}
 
   /* الهيدر العلوي */
-  header{background:#fff;border-bottom:3px solid var(--brand-gold);position:sticky;top:0;z-index:50;box-shadow: 0 2px 4px rgba(0,0,0,0.04)}
+  header{background:#fff;border-bottom:3px solid var(--brand-orange);position:sticky;top:0;z-index:50;box-shadow: 0 2px 4px rgba(0,0,0,0.05)}
   .header-inner{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .logo img{height:58px;width:auto;display:block}
   nav ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{font-weight:700;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s;font-size:0.95rem;color:var(--brand-dark)}
-  nav a:hover{color:var(--brand-gold);border-color:var(--brand-gold)}
+  nav a:hover{color:var(--brand-orange);border-color:var(--brand-orange)}
 
-  /* قسم الهيرو الترحيبي */
-  .hero{background:linear-gradient(135deg, var(--brand-dark), var(--brand-dark-light));color:#fff;text-align:center;padding:45px 20px;border-bottom:1px solid rgba(198,138,39,0.3)}
-  .hero h1{font-size:1.9rem;margin-bottom:8px;color:#fff}
-  .hero h1 span{color:var(--brand-gold)}
-  .hero p{color:#d1d5db;font-size:0.95rem}
+  /* قسم الهيرو الترحيبي بالذهبي الفاتح والبرتقالي */
+  .hero{background:linear-gradient(135deg, var(--brand-orange), var(--brand-gold-light));color:#fff;text-align:center;padding:45px 20px;border-bottom:3px solid var(--brand-dark)}
+  .hero h1{font-size:1.9rem;margin-bottom:8px;color:#fff;font-weight:800}
+  .hero h1 span{color:var(--brand-dark)}
+  .hero p{color:#fff;font-size:0.95rem;font-weight:600}
 
   main{max-width:1200px;margin:auto;padding:35px 20px 60px}
   section{margin-bottom:50px;scroll-margin-top:100px}
-  section h2{font-size:1.4rem;margin-bottom:22px;padding-right:14px;border-right:5px solid var(--brand-gold);color:var(--brand-dark);font-weight:700}
+  section h2{font-size:1.4rem;margin-bottom:22px;padding-right:14px;border-right:5px solid var(--brand-orange);color:var(--brand-dark);font-weight:700}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
-  .card{background:var(--card-bg);border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:.25s;display:flex;flex-direction:column;justify-content:space-between}
-  .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(198,138,39,.12);border-color:var(--brand-gold)}
-  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#f3f4f6}
+  .card{background:var(--card-bg);border:1px solid #fde68a;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.25s;display:flex;flex-direction:column;justify-content:space-between}
+  .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(249,115,22,.15);border-color:var(--brand-orange)}
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fef3c7}
   .card-body{padding:16px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between}
   .card-body h3{font-size:1.05rem;margin-bottom:4px;font-weight:700;color:var(--brand-dark)}
   .card-body p{color:var(--muted-text);font-size:.85rem;margin-bottom:8px}
   .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;margin-bottom:12px}
-  .price{color:var(--brand-gold);font-weight:bold;font-size:1.15rem}
+  .price{color:var(--brand-orange);font-weight:bold;font-size:1.15rem}
   .price span{font-size:0.75rem;color:var(--muted-text);font-weight:normal}
-  .badge{display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;padding:2px 8px;border-radius:20px;font-weight:600}
+  .badge{display:inline-block;background:#fef3c7;color:#c2410c;font-size:0.75rem;padding:2px 8px;border-radius:20px;font-weight:600;border:1px solid #fcd34d}
   
   .action-box{display:flex;gap:8px;margin-top:auto}
-  .action-box input{width:55px;border:1px solid #d1d5db;border-radius:6px;text-align:center;padding:6px;font-size:0.9rem;outline:none}
-  .action-box input:focus{border-color:var(--brand-gold)}
+  .action-box input{width:55px;border:1px solid #fcd34d;border-radius:6px;text-align:center;padding:6px;font-size:0.9rem;outline:none}
+  .action-box input:focus{border-color:var(--brand-orange)}
   .action-box button{flex-grow:1;background:var(--brand-dark);color:#fff;border:none;border-radius:6px;padding:8px 10px;font-weight:bold;font-size:0.85rem;cursor:pointer;transition:.2s}
-  .action-box button:hover{background:var(--brand-gold)}
+  .action-box button:hover{background:var(--brand-orange)}
 
-  .cart-btn{background:var(--brand-gold);color:#fff;padding:8px 16px;border-radius:8px;font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;font-size:0.9rem;transition:.2s}
-  .cart-btn:hover{background:var(--brand-gold-hover)}
+  .cart-btn{background:var(--brand-orange);color:#fff;padding:8px 16px;border-radius:8px;font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;font-size:0.9rem;transition:.2s}
+  .cart-btn:hover{background:var(--brand-orange-hover)}
 
   /* تذييل الصفحة المطور (Footer) */
-  footer{background:var(--brand-dark);color:#fff;padding:40px 20px 20px;border-top:4px solid var(--brand-gold)}
+  footer{background:var(--brand-dark);color:#fff;padding:40px 20px 20px;border-top:4px solid var(--brand-gold-light)}
   .footer-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;text-align:right;margin-bottom:30px}
-  .footer-col h4{color:var(--brand-gold);font-size:1.1rem;margin-bottom:12px;font-weight:bold;border-bottom:2px solid rgba(198,138,39,0.3);padding-bottom:6px;display:inline-block}
+  .footer-col h4{color:var(--brand-gold-light);font-size:1.1rem;margin-bottom:12px;font-weight:bold;border-bottom:2px solid var(--brand-orange);padding-bottom:6px;display:inline-block}
   .footer-col p, .footer-col a{color:#e5e7eb;font-size:0.9rem;margin-bottom:8px;display:block}
-  .footer-col a:hover{color:var(--brand-gold)}
+  .footer-col a:hover{color:var(--brand-gold-light)}
 
   .footer-bottom{border-top:1px solid #374151;padding-top:20px;text-align:center;font-size:0.85rem;color:#9ca3af}
   .legal-info{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;color:#d1d5db;font-weight:600}
@@ -94,7 +94,7 @@
 
 <div class="hero">
   <h1>مؤسسة <span>سنا السطوع</span> للتجارة</h1>
-  <p>الرياض - سوق الفيصلية | تجارة الجملة واستيراد المواد الكهربائية والأدوات الصحية</p>
+  <p>المملكة العربية السعودية - الرياض - حي الفيصلية - جملة الكهرباء - شارع أبي الحسن الواعظ</p>
 </div>
 
 <main>
@@ -396,7 +396,7 @@
     </div>
 </div>
 
-<!-- تذييل الصفحة الشامل مع بيانات التوثيق الرسمية -->
+<!-- تذييل الصفحة الشامل مع بيانات التوثيق الرسمية والعنوان التفصيلي -->
 <footer>
   <div class="footer-container">
     
@@ -406,10 +406,10 @@
       <p>مؤسسة سنا السطوع للتجارة متخصصة في استيراد وتوزيع أحدث حلول إضاءة LED والأدوات الكهربائية والصحية بأسعار الجملة المعتمدة.</p>
     </div>
 
-    <!-- التواصل المباشر -->
+    <!-- التواصل المباشر والعنوان التفصيلي -->
     <div class="footer-col">
-      <h4>خدمة العملاء والواتساب</h4>
-      <p>📍 الرياض - سوق الفيصلية</p>
+      <h4>خدمة العملاء والفرع الرئيسي</h4>
+      <p>📍 المملكة العربية السعودية - الرياض - حي الفيصلية - جملة الكهرباء - شارع أبي الحسن الواعظ</p>
       <a href="https://wa.me/966550144275" target="_blank">💬 واتساب المبيعات (1): 0550144275</a>
       <a href="https://wa.me/966554787285" target="_blank">💬 واتساب المبيعات (2): 0554787285</a>
     </div>
