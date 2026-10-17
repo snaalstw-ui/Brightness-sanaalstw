@@ -6,53 +6,66 @@
 <title>Brightness | سنا السطوع - كتالوج الجملة</title>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <style>
-  :root{
-    --gold:#d9902b;
-    --dark:#14213d;
-    --bg:#faf7f2;
-    --card:#ffffff;
-    --muted:#6b7280;
+  :root {
+    --brand-gold: #c68a27;      /* الذهبي الرسمي للشعار */
+    --brand-gold-hover: #a8721d;/* ذهبي غامق للتفاعل */
+    --brand-dark: #111827;      /* الأسود الداكن */
+    --brand-dark-light: #1f2937;
+    --bg-light: #f9fafb;
+    --card-bg: #ffffff;
+    --muted-text: #6b7280;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+  body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg-light);color:var(--brand-dark);line-height:1.6}
   a{text-decoration:none;color:inherit}
 
-  header{background:#fff;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:50}
-  .header-inner{max-width:1200px;margin:auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .logo img{height:54px;width:auto;display:block}
+  /* الهيدر العلوي */
+  header{background:#fff;border-bottom:3px solid var(--brand-gold);position:sticky;top:0;z-index:50;box-shadow: 0 2px 4px rgba(0,0,0,0.04)}
+  .header-inner{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo img{height:58px;width:auto;display:block}
   nav ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-  nav a{font-weight:600;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s;font-size:0.95rem}
-  nav a:hover{color:var(--gold);border-color:var(--gold)}
+  nav a{font-weight:700;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s;font-size:0.95rem;color:var(--brand-dark)}
+  nav a:hover{color:var(--brand-gold);border-color:var(--brand-gold)}
 
-  .hero{background:linear-gradient(135deg,var(--dark),#2b3a67);color:#fff;text-align:center;padding:40px 20px}
-  .hero h1{font-size:1.8rem;margin-bottom:8px}
-  .hero p{color:#e5e7eb;font-size:0.95rem}
+  /* قسم الهيرو الترحيبي */
+  .hero{background:linear-gradient(135deg, var(--brand-dark), var(--brand-dark-light));color:#fff;text-align:center;padding:45px 20px;border-bottom:1px solid rgba(198,138,39,0.3)}
+  .hero h1{font-size:1.9rem;margin-bottom:8px;color:#fff}
+  .hero h1 span{color:var(--brand-gold)}
+  .hero p{color:#d1d5db;font-size:0.95rem}
 
-  main{max-width:1200px;margin:auto;padding:30px 20px 60px}
-  section{margin-bottom:45px;scroll-margin-top:100px}
-  section h2{font-size:1.4rem;margin-bottom:20px;padding-right:14px;border-right:5px solid var(--gold)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-  .card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:.25s;display:flex;flex-direction:column;justify-content:space-between}
-  .card:hover{transform:translateY(-5px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
+  main{max-width:1200px;margin:auto;padding:35px 20px 60px}
+  section{margin-bottom:50px;scroll-margin-top:100px}
+  section h2{font-size:1.4rem;margin-bottom:22px;padding-right:14px;border-right:5px solid var(--brand-gold);color:var(--brand-dark);font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+  .card{background:var(--card-bg);border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:.25s;display:flex;flex-direction:column;justify-content:space-between}
+  .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(198,138,39,.12);border-color:var(--brand-gold)}
   .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#f3f4f6}
-  .card-body{padding:14px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between}
-  .card-body h3{font-size:1.05rem;margin-bottom:4px;font-weight:700}
-  .card-body p{color:var(--muted);font-size:.85rem;margin-bottom:8px}
-  .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;margin-bottom:10px}
-  .price{color:#d9902b;font-weight:bold;font-size:1.1rem}
-  .price span{font-size:0.75rem;color:var(--muted);font-weight:normal}
+  .card-body{padding:16px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between}
+  .card-body h3{font-size:1.05rem;margin-bottom:4px;font-weight:700;color:var(--brand-dark)}
+  .card-body p{color:var(--muted-text);font-size:.85rem;margin-bottom:8px}
+  .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;margin-bottom:12px}
+  .price{color:var(--brand-gold);font-weight:bold;font-size:1.15rem}
+  .price span{font-size:0.75rem;color:var(--muted-text);font-weight:normal}
   .badge{display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;padding:2px 8px;border-radius:20px;font-weight:600}
   
   .action-box{display:flex;gap:8px;margin-top:auto}
-  .action-box input{width:55px;border:1px solid #d1d5db;border-radius:6px;text-align:center;padding:6px;font-size:0.9rem}
-  .action-box button{flex-grow:1;background:var(--dark);color:#fff;border:none;border-radius:6px;padding:6px 10px;font-weight:bold;font-size:0.85rem;cursor:pointer;transition:.2s}
-  .action-box button:hover{background:var(--gold)}
+  .action-box input{width:55px;border:1px solid #d1d5db;border-radius:6px;text-align:center;padding:6px;font-size:0.9rem;outline:none}
+  .action-box input:focus{border-color:var(--brand-gold)}
+  .action-box button{flex-grow:1;background:var(--brand-dark);color:#fff;border:none;border-radius:6px;padding:8px 10px;font-weight:bold;font-size:0.85rem;cursor:pointer;transition:.2s}
+  .action-box button:hover{background:var(--brand-gold)}
 
-  .cart-btn{background:var(--gold);color:#111;padding:6px 14px;border-radius:8px;font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;font-size:0.9rem}
+  .cart-btn{background:var(--brand-gold);color:#fff;padding:8px 16px;border-radius:8px;font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;font-size:0.9rem;transition:.2s}
+  .cart-btn:hover{background:var(--brand-gold-hover)}
 
-  footer{background:var(--dark);color:#fff;text-align:center;padding:30px 20px}
-  footer img{height:50px;background:#fff;padding:6px 10px;border-radius:8px;margin-bottom:10px}
-  footer small{display:block;color:#cbd5e1;margin-top:4px}
+  /* تذييل الصفحة المطور (Footer) */
+  footer{background:var(--brand-dark);color:#fff;padding:40px 20px 20px;border-top:4px solid var(--brand-gold)}
+  .footer-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;text-align:right;margin-bottom:30px}
+  .footer-col h4{color:var(--brand-gold);font-size:1.1rem;margin-bottom:12px;font-weight:bold;border-bottom:2px solid rgba(198,138,39,0.3);padding-bottom:6px;display:inline-block}
+  .footer-col p, .footer-col a{color:#e5e7eb;font-size:0.9rem;margin-bottom:8px;display:block}
+  .footer-col a:hover{color:var(--brand-gold)}
+
+  .footer-bottom{border-top:1px solid #374151;padding-top:20px;text-align:center;font-size:0.85rem;color:#9ca3af}
+  .legal-info{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;color:#d1d5db;font-weight:600}
 </style>
 </head>
 <body>
@@ -80,7 +93,7 @@
 </header>
 
 <div class="hero">
-  <h1>مؤسسة سنا السطوع للتجارة</h1>
+  <h1>مؤسسة <span>سنا السطوع</span> للتجارة</h1>
   <p>الرياض - سوق الفيصلية | تجارة الجملة واستيراد المواد الكهربائية والأدوات الصحية</p>
 </div>
 
@@ -364,6 +377,14 @@
             <!-- المنتجات المضافة -->
         </div>
 
+        <div class="mb-3">
+            <label class="block text-sm font-semibold mb-1 text-gray-700">اختر الرقم المراد الإرسال إليه عبر واتساب:</label>
+            <select id="whatsapp-number" class="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none">
+              <option value="966550144275">مبيعات الجملة - الرقم 1 (0550144275)</option>
+              <option value="966554787285">مبيعات الجملة - الرقم 2 (0554787285)</option>
+            </select>
+        </div>
+
         <div class="mb-4">
             <label class="block text-sm font-semibold mb-1 text-gray-700">ملاحظات أو استفسار إضافي:</label>
             <textarea id="customer-notes" class="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none" rows="3" placeholder="اكتب اسم شركتك، المدينة، أو الكميات المطلوبة..."></textarea>
@@ -375,11 +396,35 @@
     </div>
 </div>
 
+<!-- تذييل الصفحة الشامل مع بيانات التوثيق الرسمية -->
 <footer>
-  <img src="images/logo.png" alt="Brightness - سنا السطوع">
-  <p>مؤسسة سنا السطوع للتجارة</p>
-  <small>سجل تجاري: 1009029128</small>
-  <small>© 2026 Brightness. جميع الحقوق محفوظة.</small>
+  <div class="footer-container">
+    
+    <!-- عن المؤسسة -->
+    <div class="footer-col">
+      <img src="images/logo.png" alt="Brightness - سنا السطوع" style="height: 48px; background: #fff; padding: 4px 8px; border-radius: 6px; margin-bottom: 12px;">
+      <p>مؤسسة سنا السطوع للتجارة متخصصة في استيراد وتوزيع أحدث حلول إضاءة LED والأدوات الكهربائية والصحية بأسعار الجملة المعتمدة.</p>
+    </div>
+
+    <!-- التواصل المباشر -->
+    <div class="footer-col">
+      <h4>خدمة العملاء والواتساب</h4>
+      <p>📍 الرياض - سوق الفيصلية</p>
+      <a href="https://wa.me/966550144275" target="_blank">💬 واتساب المبيعات (1): 0550144275</a>
+      <a href="https://wa.me/966554787285" target="_blank">💬 واتساب المبيعات (2): 0554787285</a>
+    </div>
+
+  </div>
+
+  <!-- بيانات التوثيق الرسمية والسجل التجاري والضريبي -->
+  <div class="footer-bottom">
+    <div class="legal-info">
+      <span>📄 السجل التجاري: 1009029128</span>
+      <span>•</span>
+      <span>🧾 الرقم الضريبي: 310306992700003</span>
+    </div>
+    <p>© 2026 Brightness | جميع الحقوق محفوظة لمؤسسة سنا السطوع للتجارة.</p>
+  </div>
 </footer>
 
 <script>
@@ -440,6 +485,7 @@
             alert('الرجاء إضافة منتجات أولاً');
             return;
         }
+        const selectedNumber = document.getElementById('whatsapp-number').value;
         const notes = document.getElementById('customer-notes').value;
         let message = `السلام عليكم، أود طلب عرض سعر من مؤسسة سنا السطوع:\n\n`;
         cart.forEach((item, i) => {
@@ -450,7 +496,7 @@
         }
         
         const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/966550144275?text=${encodedMessage}`, '_blank');
+        window.open(`https://wa.me/${selectedNumber}?text=${encodedMessage}`, '_blank');
     }
 </script>
 
