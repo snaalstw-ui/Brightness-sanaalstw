@@ -27,7 +27,7 @@
   nav a{font-weight:700;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s;font-size:0.95rem;color:var(--brand-dark)}
   nav a:hover{color:var(--brand-orange);border-color:var(--brand-orange)}
 
-  /* قسم الهيرو الترحيبي بالذهبي الفاتح والبرتقالي */
+  /* قسم الهيرو الترحيبي */
   .hero{background:linear-gradient(135deg, var(--brand-orange), var(--brand-gold-light));color:#fff;text-align:center;padding:45px 20px;border-bottom:3px solid var(--brand-dark)}
   .hero h1{font-size:1.9rem;margin-bottom:8px;color:#fff;font-weight:800}
   .hero h1 span{color:var(--brand-dark)}
@@ -46,8 +46,12 @@
   .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;margin-bottom:12px}
   .price{color:var(--brand-orange);font-weight:bold;font-size:1.15rem}
   .price span{font-size:0.75rem;color:var(--muted-text);font-weight:normal}
-  .badge{display:inline-block;background:#fef3c7;color:#c2410c;font-size:0.75rem;padding:2px 8px;border-radius:20px;font-weight:600;border:1px solid #fcd34d}
   
+  /* الشارات والتفاصيل الصغيرة */
+  .badge-container{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}
+  .badge{display:inline-block;background:#fef3c7;color:#c2410c;font-size:0.75rem;padding:2px 8px;border-radius:20px;font-weight:600;border:1px solid #fcd34d}
+  .color-info{font-size:0.72rem;color:#6b7280;font-weight:600}
+
   .action-box{display:flex;gap:8px;margin-top:auto}
   .action-box input{width:55px;border:1px solid #fcd34d;border-radius:6px;text-align:center;padding:6px;font-size:0.9rem;outline:none}
   .action-box input:focus{border-color:var(--brand-orange)}
@@ -57,7 +61,7 @@
   .cart-btn{background:var(--brand-orange);color:#fff;padding:8px 16px;border-radius:8px;font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;font-size:0.9rem;transition:.2s}
   .cart-btn:hover{background:var(--brand-orange-hover)}
 
-  /* تذييل الصفحة المطور (Footer) */
+  /* تذييل الصفحة */
   footer{background:var(--brand-dark);color:#fff;padding:40px 20px 20px;border-top:4px solid var(--brand-gold-light)}
   .footer-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;text-align:right;margin-bottom:30px}
   .footer-col h4{color:var(--brand-gold-light);font-size:1.1rem;margin-bottom:12px;font-weight:bold;border-bottom:2px solid var(--brand-orange);padding-bottom:6px;display:inline-block}
@@ -109,7 +113,10 @@
           <div>
             <h3>7 وات سيوبي داخلي</h3>
             <p>COB Down Light Indoor 7W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-color-info color-info">• أبيض 6500K | أصيفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">1.9 <span>ر.س / جملة</span></span>
             </div>
@@ -127,7 +134,10 @@
           <div>
             <h3>15 وات سيوبي داخلي</h3>
             <p>COB Down Light Indoor 15W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">4.5 <span>ر.س / جملة</span></span>
             </div>
@@ -145,7 +155,10 @@
           <div>
             <h3>30 وات سيوبي داخلي</h3>
             <p>COB Down Light Indoor 30W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">7.5 <span>ر.س / جملة</span></span>
             </div>
@@ -163,7 +176,10 @@
           <div>
             <h3>30 وات سيوبي خارجي</h3>
             <p>COB Down Light Outdoor 30W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">8 <span>ر.س / جملة</span></span>
             </div>
@@ -181,7 +197,10 @@
           <div>
             <h3>40 وات سيوبي خارجي</h3>
             <p>COB Down Light Outdoor 40W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">14 <span>ر.س / جملة</span></span>
             </div>
@@ -205,7 +224,10 @@
           <div>
             <h3>وات 30 لاتش بانل</h3>
             <p>LED Panel Light 30W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">9 <span>ر.س / جملة</span></span>
             </div>
@@ -229,7 +251,10 @@
           <div>
             <h3>7 واط جيوتن</h3>
             <p>LED GU10 7W</p>
-            <span class="badge">ضمان 3 سنوات</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">1.5 <span>ر.س / جملة</span></span>
             </div>
@@ -247,7 +272,10 @@
           <div>
             <h3>9 واط جيوتن</h3>
             <p>LED GU10 9W</p>
-            <span class="badge">ضمان سنتين</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• أبيض 6500K | أصفر 3000K | كريمي 4500K</span>
+            </div>
             <div class="price-row">
               <span class="price">2.1 <span>ر.س / جملة</span></span>
             </div>
@@ -271,7 +299,10 @@
           <div>
             <h3>إطار مفرد دائري</h3>
             <p>Single Round Frame</p>
-            <span class="badge">جودة عالية</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• متوفر أبيض / أسود</span>
+            </div>
             <div class="price-row">
               <span class="price">1 <span>ر.س / جملة</span></span>
             </div>
@@ -289,7 +320,10 @@
           <div>
             <h3>إطار مفرد مربع</h3>
             <p>Single Square Frame</p>
-            <span class="badge">جودة عالية</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• متوفر أبيض / أسود</span>
+            </div>
             <div class="price-row">
               <span class="price">1.1 <span>ر.س / جملة</span></span>
             </div>
@@ -307,7 +341,10 @@
           <div>
             <h3>إطار مزوج</h3>
             <p>Double Frame</p>
-            <span class="badge">جودة عالية</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• متوفر أبيض / أسود</span>
+            </div>
             <div class="price-row">
               <span class="price">2.5 <span>ر.س / جملة</span></span>
             </div>
@@ -325,7 +362,10 @@
           <div>
             <h3>إطار ثلاثي</h3>
             <p>Triple Frame</p>
-            <span class="badge">جودة عالية</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• متوفر أبيض / أسود</span>
+            </div>
             <div class="price-row">
               <span class="price">3.9 <span>ر.س / جملة</span></span>
             </div>
@@ -349,7 +389,10 @@
           <div>
             <h3>هولدر</h3>
             <p>Holder / Socket</p>
-            <span class="badge">سيراميك</span>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+              <span class="color-info">• سيراميك عالي الجودة</span>
+            </div>
             <div class="price-row">
               <span class="price">0.5 <span>ر.س / جملة</span></span>
             </div>
@@ -387,7 +430,7 @@
 
         <div class="mb-4">
             <label class="block text-sm font-semibold mb-1 text-gray-700">ملاحظات أو استفسار إضافي:</label>
-            <textarea id="customer-notes" class="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none" rows="3" placeholder="اكتب اسم شركتك، المدينة، أو الكميات المطلوبة..."></textarea>
+            <textarea id="customer-notes" class="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-amber-500 outline-none" rows="3" placeholder="اكتب اسم شركتك، المدينة، الألوان المطلوب تحديدها..."></textarea>
         </div>
 
         <button onclick="sendToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded transition flex items-center justify-center gap-2 shadow-sm cursor-pointer">
