@@ -59,7 +59,7 @@
     flex-wrap: wrap;
   }
   .logo img {
-    height: 110px; /* تم تكبير اللوقو هنا */
+    height: 110px;
     width: auto;
     display: block;
     transition: transform 0.2s;
@@ -198,6 +198,48 @@
   }
   .cart-btn:hover { background: var(--brand-orange-hover); }
 
+  /* تصميم كرت التوثيق الرسمي الجميل المقتبس من الصورة بالضبط */
+  .registered-entity-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 30px auto;
+    max-width: 1250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border: 1px solid #334155;
+  }
+  .registered-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #60a5fa;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .registered-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    text-align: right;
+  }
+  .registered-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .registered-label {
+    color: #94a3b8;
+    font-weight: 700;
+  }
+  .registered-val {
+    color: #f8fafc;
+    font-weight: 800;
+  }
+
   /* تذييل الصفحة الفاتح والأنيق */
   footer { background: #ffffff; color: var(--brand-dark); padding: 45px 20px 20px; border-top: 4px solid var(--brand-orange); box-shadow: 0 -4px 15px rgba(0,0,0,0.02); }
   .footer-container { max-width: 1250px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 35px; text-align: right; margin-bottom: 35px; }
@@ -221,7 +263,6 @@
   .location-link:hover { background: var(--brand-orange); color: #fff !important; border-color: var(--brand-orange); }
 
   .footer-bottom { border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748b; }
-  .legal-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; color: #334155; font-weight: 700; }
   
   /* مربع ساعات العمل المميز أسفل الموقع */
   .work-hours-box {
@@ -595,6 +636,35 @@
     </div>
   </section>
 
+  <!-- بطاقة التوثيق الرسمية المقتبسة من الصورة بالضبط -->
+  <div class="registered-entity-card">
+    <div class="registered-header">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      <span>منشأة مسجلة رسمياً</span>
+    </div>
+    
+    <div class="registered-info-list">
+      <div class="registered-row">
+        <span class="registered-label">الاسم النظامي:</span>
+        <span class="registered-val">مؤسسة سنا السطوع للتجارة</span>
+      </div>
+      <div class="registered-row">
+        <span class="registered-label">السجل التجاري:</span>
+        <span class="registered-val">1009029128</span>
+      </div>
+      <div class="registered-row">
+        <span class="registered-label">الرقم الضريبي:</span>
+        <span class="registered-val">310306992700003</span>
+      </div>
+      <div class="registered-row">
+        <span class="registered-label">العنوان:</span>
+        <span class="registered-val">الرياض، حي الفيصلية، جملة الكهرباء، شارع أبي الحسن الواعظ</span>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 <!-- نافذة سلة طلبات عروض الأسعار -->
@@ -672,11 +742,6 @@
 
   <!-- بيانات التوثيق الرسمية والسجل التجاري والضريبي -->
   <div class="footer-bottom">
-    <div class="legal-info">
-      <span>📄 السجل التجاري: 1009029128</span>
-      <span>•</span>
-      <span>🧾 الرقم الضريبي: 310306992700003</span>
-    </div>
     <p>© 2026 Brightness | جميع الحقوق محفوظة لمؤسسة سنا السطوع للتجارة.</p>
   </div>
 </footer>
