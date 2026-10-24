@@ -12,14 +12,14 @@
     --brand-gold-light: #fef08a;
     --brand-gold: #e6b800;
     --brand-dark: #1f2937;
-    --bg-light: #fafaf9; /* خلفية أفتح وأرقى */
+    --bg-light: #fafaf9;
     --card-bg: #ffffff;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg-light);color:var(--brand-dark);line-height:1.6}
   a{text-decoration:none;color:inherit}
 
-  /* الشريط العلوي المتحرك المحدث بالعبارة الجديدة */
+  /* الشريط العلوي المتحرك */
   .top-ticker {
     background: #fff7ed;
     color: #c2410c;
@@ -39,7 +39,7 @@
     100% { transform: translateX(-100%); }
   }
 
-  /* الهيدر الأبيض مع الشعار المكبر */
+  /* الهيدر الرئيسي مع الشعار المكبر */
   header {
     background: #ffffff;
     position: sticky;
@@ -59,12 +59,12 @@
     flex-wrap: wrap;
   }
   .logo img {
-    height: 85px; /* تكبير الشعار */
+    height: 110px; /* تم تكبير اللوقو هنا */
     width: auto;
     display: block;
     transition: transform 0.2s;
   }
-  .logo img:hover { transform: scale(1.02); }
+  .logo img:hover { transform: scale(1.03); }
 
   /* روابط التواصل ألوان فاتحة */
   .social-header {
@@ -200,7 +200,7 @@
 
   /* تذييل الصفحة الفاتح والأنيق */
   footer { background: #ffffff; color: var(--brand-dark); padding: 45px 20px 20px; border-top: 4px solid var(--brand-orange); box-shadow: 0 -4px 15px rgba(0,0,0,0.02); }
-  .footer-container { max-width: 1250px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; text-align: right; margin-bottom: 35px; }
+  .footer-container { max-width: 1250px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 35px; text-align: right; margin-bottom: 35px; }
   .footer-col h4 { color: #c2410c; font-size: 1.1rem; margin-bottom: 12px; font-weight: 800; border-bottom: 2px solid var(--brand-gold); padding-bottom: 6px; display: inline-block; }
   .footer-col p, .footer-col a { color: #4b5563; font-size: 0.9rem; margin-bottom: 8px; display: block; }
   .footer-col a:hover { color: var(--brand-orange); }
@@ -222,6 +222,20 @@
 
   .footer-bottom { border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748b; }
   .legal-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; color: #334155; font-weight: 700; }
+  
+  /* مربع ساعات العمل المميز أسفل الموقع */
+  .work-hours-box {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+  .work-hours-box p {
+    color: #92400e !important;
+    font-weight: 700;
+    margin-bottom: 2px !important;
+  }
 </style>
 </head>
 <body>
@@ -618,9 +632,9 @@
 <footer>
   <div class="footer-container">
     
-    <!-- عن المؤسسة -->
+    <!-- عن المؤسسة مع الشعار المكبر -->
     <div class="footer-col">
-      <img src="images/logo.png" alt="Brightness - سنا السطوع" style="height: 60px; background: #fff; padding: 4px 8px; border-radius: 8px; margin-bottom: 12px; border: 1px solid #fee2e2;">
+      <img src="images/logo.png" alt="Brightness - سنا السطوع" style="height: 85px; background: #fff; padding: 4px 8px; border-radius: 8px; margin-bottom: 12px; border: 1px solid #fee2e2;">
       <p>سنا السطوع لحلول الإنارة الاحترافية بأعلى معايير الجودة والضمان، استيراد وتوزيع منتجات إضاءة LED بأسعار الجملة المعتمدة.</p>
     </div>
 
@@ -635,6 +649,15 @@
 
       <a href="https://wa.me/966550144275" target="_blank" style="margin-top: 10px;">💬 واتساب المبيعات (1): 0550144275</a>
       <a href="https://wa.me/966554787285" target="_blank">💬 واتساب المبيعات (2): 0554787285</a>
+    </div>
+
+    <!-- ساعات العمل في أخر الموقع -->
+    <div class="footer-col">
+      <h4>ساعات العمل</h4>
+      <div class="work-hours-box">
+        <p>🕒 من السبت إلى الخميس</p>
+        <p>8:00 صباحاً - 8:00 مساءً</p>
+      </div>
     </div>
 
     <!-- مواقع التواصل الاجتماعي -->
