@@ -202,6 +202,24 @@
   }
   .cart-btn:hover { background: var(--brand-orange-hover); }
 
+  /* تنسيق أزرار التبويبات (Tabs) للأدوات الصحية */
+  .category-tab-btn {
+    border: 2px solid var(--brand-orange);
+    color: #333;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 8px 22px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .category-tab-btn:hover, .category-tab-btn.active {
+    background-color: var(--brand-orange);
+    color: #fff;
+    border-color: var(--brand-orange);
+    box-shadow: 0 4px 10px rgba(249,115,22,0.3);
+  }
+
   /* تذييل الصفحة الفاتح والأنيق */
   footer { background: #ffffff; color: var(--brand-dark); padding: 45px 20px 20px; border-top: 4px solid var(--brand-orange); box-shadow: 0 -4px 15px rgba(0,0,0,0.02); }
   .footer-container { max-width: 1250px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 35px; text-align: right; margin-bottom: 25px; }
@@ -332,7 +350,7 @@
       <p style="font-size: 0.88rem; color: #4b5563; margin-bottom: 12px;">الرياض، حي الفيصلية، شارع أبي الحسن الواعظ، 12881</p>
       
       <a href="https://maps.app.goo.gl/ZHnNu55CcM7Bejuf9" target="_blank" class="location-link" style="width: 100%; justify-content: center;">
-        🗺️ فتح موقع المحل على قوقل ماب (Google Maps)
+        🗺️ موقع المحل على قوقل ماب (Google Maps)
       </a>
     </div>
   </div>
@@ -616,6 +634,279 @@
     </div>
   </section>
 
+  <!-- قسم الأدوات الصحية والشطافات الجديد بنظام الـ Tabs -->
+  <section id="sanitary-section" class="py-4 border-top">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold" style="color: var(--brand-orange);">قسم الأدوات الصحية والشطافات</h2>
+      <p class="text-muted">تصفح أقسام الشطافات، الخلاطات، ومستلزمات السباكة بكل سهولة واحترافية</p>
+    </div>
+
+    <!-- أزرار التبويبات التفاعلية (Tabs) -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+      <button class="btn category-tab-btn active" onclick="filterSanitary('all', this)">الكل (10 منتجات)</button>
+      <button class="btn category-tab-btn" onclick="filterSanitary('shattaf', this)">الشطافات</button>
+      <button class="btn category-tab-btn" onclick="filterSanitary('mixers', this)">الخلاطات</button>
+      <button class="btn category-tab-btn" onclick="filterSanitary('plumbing', this)">مستلزمات السباكة</button>
+    </div>
+
+    <!-- شبكة المنتجات الكاملة (الـ 10 أنواع شطافات بالتفصيل) -->
+    <div class="grid" id="sanitary-products-grid">
+      
+      <!-- 1. شطاف كامل مربع M.K -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-mk-square.jpg" alt="شطاف كامل مربع M.K" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف كامل مربع M.K</h3>
+            <p>ألماني - يتحمل الضغط العالي</p>
+            <div class="badge-container">
+              <span class="badge">ضمان 5 سنوات</span>
+            </div>
+            <div class="price-row">
+              <span class="price">20 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s1" value="1" min="1">
+            <button onclick="addToCart('s1', 'شطاف كامل مربع M.K', 20)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. شطاف طويل LUNA -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-luna-long.jpg" alt="شطاف طويل LUNA" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف طويل LUNA</h3>
+            <p>ألماني - توفير المياه ومضاد للبكتيريا</p>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+            </div>
+            <div class="price-row">
+              <span class="price">15 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s2" value="1" min="1">
+            <button onclick="addToCart('s2', 'شطاف طويل LUNA', 15)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. شطاف Sedna ذهبي -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-sedna-gold.jpg" alt="شطاف Sedna ذهبي" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف Sedna ذهبي</h3>
+            <p>ألماني - لون ذهبي أنيق</p>
+            <div class="badge-container">
+              <span class="badge">ضمان 3 سنوات</span>
+            </div>
+            <div class="price-row">
+              <span class="price">22 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s3" value="1" min="1">
+            <button onclick="addToCart('s3', 'شطاف Sedna ذهبي', 22)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. شطاف Hannaver TEMPESTA-F -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-hannaver.jpg" alt="شطاف Hannaver TEMPESTA-F" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف Hannaver TEMPESTA-F</h3>
+            <p>ألماني - كروم عالي الجودة</p>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+            </div>
+            <div class="price-row">
+              <span class="price">22 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s4" value="1" min="1">
+            <button onclick="addToCart('s4', 'شطاف Hannaver TEMPESTA-F', 22)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. شطاف Premier 1 إيطالي -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-premier-italy.jpg" alt="شطاف Premier 1 إيطالي" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف Premier 1 إيطالي</h3>
+            <p>إيطالي - موفر للمياه</p>
+            <div class="badge-container">
+              <span class="badge">ضمان 3 سنوات</span>
+            </div>
+            <div class="price-row">
+              <span class="price">18 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s5" value="1" min="1">
+            <button onclick="addToCart('s5', 'شطاف Premier 1 إيطالي', 18)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. شطاف ZEGOR -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-zegor.jpg" alt="شطاف ZEGOR" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف ZEGOR</h3>
+            <p>طقم شطاف ولي احترافي</p>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+            </div>
+            <div class="price-row">
+              <span class="price">14 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s6" value="1" min="1">
+            <button onclick="addToCart('s6', 'شطاف ZEGOR', 14)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. طقم شطاف إيطالي PREMIER -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-premier-set.jpg" alt="طقم شطاف إيطالي PREMIER" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>طقم شطاف إيطالي PREMIER</h3>
+            <p>إيطالي عالي الجودة متكامل</p>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+            </div>
+            <div class="price-row">
+              <span class="price">33 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s7" value="1" min="1">
+            <button onclick="addToCart('s7', 'طقم شطاف إيطالي PREMIER', 33)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. شطاف SCHMIDT الألماني -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-schmidt.jpg" alt="شطاف SCHMIDT الألماني" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف SCHMIDT الألماني</h3>
+            <p>ألماني عالي الجودة</p>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+            </div>
+            <div class="price-row">
+              <span class="price">25 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s8" value="1" min="1">
+            <button onclick="addToCart('s8', 'شطاف SCHMIDT الألماني', 25)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. شطاف Verona إيطالي -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-verona-italy.jpg" alt="شطاف Verona إيطالي" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف Verona إيطالي</h3>
+            <p>صنع في إيطاليا</p>
+            <div class="badge-container">
+              <span class="badge">ضمان 5 سنوات</span>
+            </div>
+            <div class="price-row">
+              <span class="price">12 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s9" value="1" min="1">
+            <button onclick="addToCart('s9', 'شطاف Verona إيطالي', 12)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. شطاف TENSY إيطالي -->
+      <div class="card sanitary-item shattaf">
+        <img src="images/shattaf-tensy-italy.jpg" alt="شطاف TENSY إيطالي" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>شطاف TENSY إيطالي</h3>
+            <p>صنع في إيطاليا</p>
+            <div class="badge-container">
+              <span class="badge">ضمان سنتين</span>
+            </div>
+            <div class="price-row">
+              <span class="price">10 <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-s10" value="1" min="1">
+            <button onclick="addToCart('s10', 'شطاف TENSY إيطالي', 10)">إضافة للطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- نموذج قسم الخلاطات (مخصص لتوسعته لاحقاً) -->
+      <div class="card sanitary-item mixers d-none" style="display: none;">
+        <img src="images/mixer-placeholder.jpg" alt="خلاط مغسلة" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>خلاطات المغاسل والدوش</h3>
+            <p>تشكيلة قريباً</p>
+            <div class="badge-container">
+              <span class="badge">ضمان معتمد</span>
+            </div>
+            <div class="price-row">
+              <span class="price">-- <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-m1" value="1" min="1" disabled>
+            <button disabled style="background: #9ca3af; cursor: not-allowed;">قريباً</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- نموذج قسم مستلزمات السباكة -->
+      <div class="card sanitary-item plumbing d-none" style="display: none;">
+        <img src="images/plumbing-placeholder.jpg" alt="مستلزمات سباكة" loading="lazy">
+        <div class="card-body">
+          <div>
+            <h3>توصيلات وليات أصلية</h3>
+            <p>جودة عالية</p>
+            <div class="badge-container">
+              <span class="badge">معتمد</span>
+            </div>
+            <div class="price-row">
+              <span class="price">-- <span>ر.س / جملة</span></span>
+            </div>
+          </div>
+          <div class="action-box">
+            <input type="number" id="qty-p1" value="1" min="1" disabled>
+            <button disabled style="background: #9ca3af; cursor: not-allowed;">قريباً</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ملحقات -->
   <section id="accessories">
     <h2>ملحقات</h2>
@@ -758,7 +1049,7 @@
 
     function addToCart(id, name, price) {
         const qtyInput = document.getElementById(`qty-${id}`);
-        const qty = parseInt(qtyInput.value) || 1;
+        const qty = qtyInput ? (parseInt(qtyInput.value) || 1) : 1;
         const existing = cart.find(item => item.id === id);
         
         if (existing) {
@@ -804,6 +1095,26 @@
         cart.splice(index, 1);
         updateCartCount();
         openCartModal();
+    }
+
+    // دالة تصفية الأقسام (Tabs) للأدوات الصحية
+    function filterSanitary(category, btn) {
+        let buttons = document.querySelectorAll('.category-tab-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        let items = document.querySelectorAll('.sanitary-item');
+        items.forEach(item => {
+            if (category === 'all') {
+                item.style.display = 'flex';
+            } else {
+                if (item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        });
     }
 
     function sendToWhatsApp() {
